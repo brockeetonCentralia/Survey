@@ -1,2 +1,7 @@
 <app-nav-bar></app-nav-bar>
-It works
+<h1>Classes</h1>
+<div *ngIf="classes.length > 0">
+    <div class="class-item" *ngFor="let item of classes">
+        <div>Class: {{ item.ClassCode }}</div>
+    </div>
+</div>

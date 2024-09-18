@@ -1,13 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { DataService } from '../data.service';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-classes',
   standalone: true,
-  imports: [NavBarComponent],
+  imports: [NavBarComponent, RouterLink, RouterOutlet, CommonModule,],
   templateUrl: './classes.component.html',
   styleUrls: ['./classes.component.css'],
 })
-export class ClassesComponent {
+export class ClassesComponent implements OnInit {
+
+  classes: any[] = [];
+
+  constructor(private data: DataService) {}
+
+  ngOnInit(): void {
+    this.data.getAllClasses().subscribe(result => {
+      console.log(result);
+      this.classes = result;
+    });
+  }
 
 }
