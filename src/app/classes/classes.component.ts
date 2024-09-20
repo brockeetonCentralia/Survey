@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 import { DataService } from '../data.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, JsonPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-classes',
   standalone: true,
-  imports: [NavBarComponent, RouterLink, RouterOutlet, CommonModule,],
+  imports: [NavBarComponent, RouterLink, RouterOutlet, CommonModule, JsonPipe],
   templateUrl: './classes.component.html',
   styleUrls: ['./classes.component.css'],
 })
@@ -19,10 +19,11 @@ export class ClassesComponent implements OnInit {
   constructor(private data: DataService) {}
 
   ngOnInit(): void {
-    this.data.getAllClasses().subscribe(result => {
-      console.log(result);
-      this.classes = result;
-    });
+    this.data.getAllClasses().subscribe(
+      (resp) => {
+        this.classes = resp;
+      }
+    );
   }
 
 }

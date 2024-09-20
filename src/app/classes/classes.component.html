@@ -1,7 +1,8 @@
 <app-nav-bar></app-nav-bar>
 <h1>Classes</h1>
-<div *ngIf="classes.length > 0">
-    <div class="class-item" *ngFor="let item of classes">
-        <div>Class: {{ item.ClassCode }}</div>
+<!-- <div *ngIf="classes.length > 0">
+    <div class="class-item" *ngFor="let class of classes">
+        <div>Class: {{ class.ClassCode | json }}</div>
     </div>
-</div>
+</div> -->
+{{ classes | json}}
