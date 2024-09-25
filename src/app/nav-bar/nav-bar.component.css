@@ -1,6 +1,9 @@
 .navbar {
     background-color: antiquewhite;
     height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
 }
 
 .navbar-brand, .offcanvas-title {
@@ -17,7 +20,7 @@
     transition: 0.3s color;
 }
 
-.nav-toggler {
+.navbar-toggler {
     border: none;
     font-size: 1.25rem;
 }

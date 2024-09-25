@@ -1,43 +1,30 @@
-*{
-    padding: 0;
-    margin: 0;
+
+.background {
+  background: url(https://images.sidearmdev.com/convert?url=https%3a%2f%2fdxbhsrqyrr690.cloudfront.net%2fsidearm.nextgen.sites%2funionathletics.com%2fimages%2f2021%2f5%2f11%2f2019_Union_AerialPhotos_11.png&type=webp) no-repeat center;
+  background-size: cover;
+  width: 100%;
 }
 
-.imgbackground {
-  position: fixed;
+.background:before {
+  background-color: rgba(0, 0, 0, 0.6);
+  content: "";
+  position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
-  max-width: 80%;
-  min-height: 100%;
-  color: black;
-  border: 2px solid white;
+  bottom: 0;
+  left: 0;
 }
 
-.card {
-  position: fixed;
-  top: 40%;
-  left: 10%;
-  background-color: gold;
-  color: mediumblue;
-  border: 4px solid mediumblue;
+.background .container {
+    height: 100vh;
+    z-index: 1;
+    position: relative;
 }
 
-.card-body {
-    padding: 15px;
-    inline-size: 375px;
+.background h1 {
+  font-size: 1.5em;
 }
 
-.card-title {
-  padding: 10px;
-  color: mediumblue;
-}
-
-.space {
-    padding: 7px;
-}
-
-.btn {
-  background-color: mediumblue;
-  padding: 5px;
+.background h2 {
+  font-size: 1.2em;
 }
