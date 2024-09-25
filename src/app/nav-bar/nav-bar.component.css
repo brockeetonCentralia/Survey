@@ -6,6 +6,10 @@
     padding: 0.5rem;
 }
 
+.offcanvas {
+    background-color: antiquewhite;
+}
+
 .navbar-brand, .offcanvas-title {
     font-weight: 700;
     color:cadetblue;
