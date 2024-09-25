@@ -16,7 +16,7 @@ export class DataService {
 
   getAllClasses(): Observable<any[]> 
   {
-    return this.http.get<any[]>(`${this.baseUrl}/classes`);
+    return this.http.get<any[]>(`${this.baseUrl}/classes-page`);
   }
 
 }
