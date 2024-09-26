@@ -4,11 +4,13 @@ import { DataService } from '../data.service';
 import { CommonModule, JsonPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-classes',
   standalone: true,
-  imports: [NavBarComponent, RouterLink, RouterOutlet, CommonModule, JsonPipe],
+  imports: [NavBarComponent, RouterLink, RouterOutlet, CommonModule],
+  providers: [DataService, HttpClient],
   templateUrl: './classes.component.html',
   styleUrls: ['./classes.component.css'],
 })
